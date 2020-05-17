@@ -66,6 +66,7 @@ class VideoCell: UICollectionViewCell {
   var thumbnailImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.backgroundColor = .cyan
+    imageView.image = UIImage(named: "mj.jpg")
     return imageView
   }()
   
