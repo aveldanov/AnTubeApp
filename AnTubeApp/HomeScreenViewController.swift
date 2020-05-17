@@ -21,6 +21,8 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
   }
   
+  //MARK: - Collection Methods
+  
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return 5
   }
@@ -31,7 +33,7 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
     
     
-//        cell.backgroundColor = .brown
+    //        cell.backgroundColor = .brown
     
     
     return cell
@@ -42,8 +44,10 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     return CGSize(width: view.frame.width, height: 200)
   }
   
-  
-  
+  // eliminate space
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 0
+  }
   
   
   
@@ -67,13 +71,28 @@ class VideoCell: UICollectionViewCell {
   }()
   
   
+  let separatorView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .black
+    view.translatesAutoresizingMaskIntoConstraints = false
+
+    return view
+  }()
+  
+  
   func setupViews(){
-        addSubview(thumbnailImageView)
+    addSubview(thumbnailImageView)
+    addSubview(separatorView)
     
     addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: [], metrics: nil, views: ["v0" : thumbnailImageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-|", options: [], metrics: nil, views: ["v0" : thumbnailImageView]))
+    addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]|", options: [], metrics: nil, views: ["v0" : thumbnailImageView, "v1": separatorView]))
     
-//    thumbnailImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+    
+    
+    addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: [], metrics: nil, views: ["v1" : separatorView]))
+//    addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[v1(1)]|", options: [], metrics: nil, views: ["v1" : separatorView]))
+    
+    //    thumbnailImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     
   }
   
