@@ -67,6 +67,8 @@ class VideoCell: UICollectionViewCell {
     let imageView = UIImageView()
     imageView.backgroundColor = .cyan
     imageView.image = UIImage(named: "mj.jpg")
+    imageView.contentMode = .scaleAspectFill
+    imageView.clipsToBounds = true
     return imageView
   }()
   
@@ -80,6 +82,9 @@ class VideoCell: UICollectionViewCell {
   let userProfileImageView: UIView = {
     let imageView = UIImageView()
     imageView.backgroundColor = .red
+    imageView.image = UIImage(named: "mjprofile")
+    imageView.layer.cornerRadius = 22
+    imageView.layer.masksToBounds = true
     return imageView
   }()
   

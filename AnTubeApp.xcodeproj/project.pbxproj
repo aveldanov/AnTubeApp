@@ -13,6 +13,7 @@
 		21322CFA246F9D29005A290B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21322CF9246F9D29005A290B /* Assets.xcassets */; };
 		21322CFD246F9D29005A290B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21322CFB246F9D29005A290B /* LaunchScreen.storyboard */; };
 		21322D05246FA727005A290B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21322D04246FA727005A290B /* HomeScreenViewController.swift */; };
+		21322D07247121C0005A290B /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 21322D06247121C0005A290B /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		21322CFC246F9D29005A290B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21322CFE246F9D29005A290B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21322D04246FA727005A290B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		21322D06247121C0005A290B /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		21322CE4246F9D26005A290B = {
 			isa = PBXGroup;
 			children = (
+				21322D06247121C0005A290B /* LICENSE.md */,
 				21322CEF246F9D26005A290B /* AnTubeApp */,
 				21322CEE246F9D26005A290B /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21322D07247121C0005A290B /* LICENSE.md in Resources */,
 				21322CFD246F9D29005A290B /* LaunchScreen.storyboard in Resources */,
 				21322CFA246F9D29005A290B /* Assets.xcassets in Resources */,
 				21322CF8246F9D26005A290B /* Main.storyboard in Resources */,
