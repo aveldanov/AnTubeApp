@@ -15,10 +15,11 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     super.viewDidLoad()
     
     
-    collectionView.backgroundColor = .red
-    
+    collectionView.backgroundColor = .white
+    navigationController?.navigationBar.isTranslucent = false
     navigationItem.title = "Home"
     collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
+
   }
   
   //MARK: - Collection Methods
@@ -41,7 +42,8 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
   
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: view.frame.width, height: 200)
+    let height = (view.frame.width - 16 - 16) * 9 / 16
+    return CGSize(width: view.frame.width, height: height+16+68)
   }
   
   // eliminate space
@@ -75,13 +77,13 @@ class VideoCell: UICollectionViewCell {
   
   let separatorView: UIView = {
     let view = UIView()
-    view.backgroundColor = .black
+    view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
     return view
   }()
   
   let userProfileImageView: UIView = {
     let imageView = UIImageView()
-//    imageView.backgroundColor = .red
+    imageView.backgroundColor = .yellow
     imageView.image = UIImage(named: "mjprofile")
     imageView.layer.cornerRadius = 22
     imageView.layer.masksToBounds = true
@@ -99,10 +101,11 @@ class VideoCell: UICollectionViewCell {
   
   let subTitleTextView: UITextView = {
     let textView = UITextView()
-//    textView.backgroundColor = .systemPink
+    textView.backgroundColor = .clear
     textView.translatesAutoresizingMaskIntoConstraints = false
-    textView.text = "MJVevo * 1,444,440 views * 2 years"
-    textView.textContainerInset = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
+    textView.text = "MJVevo - Beat It, Beat It, Beat It  * 1,444,440 views * 2 years ago"
+    textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
+    textView.textColor = .lightGray
     return textView
   }()
   
@@ -138,7 +141,7 @@ class VideoCell: UICollectionViewCell {
     
         // top constraint
         
-        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8))
+        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 4))
         
     //    left constraint
         addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
@@ -146,7 +149,7 @@ class VideoCell: UICollectionViewCell {
     // right constraint
         addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // height constraint
-        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .height, multiplier: 1, constant: 20))
+        addConstraint(NSLayoutConstraint(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .height, multiplier: 1, constant: 30))
     
     
     

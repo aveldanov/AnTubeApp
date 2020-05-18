@@ -27,6 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       window.rootViewController = navigationController
       self.window = window
       window.makeKeyAndVisible()
+      
+      navigationController.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
     }
     
     
