@@ -15,7 +15,7 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     super.viewDidLoad()
     
     
-    collectionView.backgroundColor = .orange
+    collectionView.backgroundColor = .red
     
     navigationItem.title = "Home"
     collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
@@ -65,7 +65,7 @@ class VideoCell: UICollectionViewCell {
   
   var thumbnailImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.backgroundColor = .cyan
+//    imageView.backgroundColor = .cyan
     imageView.image = UIImage(named: "mj.jpg")
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
@@ -81,7 +81,7 @@ class VideoCell: UICollectionViewCell {
   
   let userProfileImageView: UIView = {
     let imageView = UIImageView()
-    imageView.backgroundColor = .red
+//    imageView.backgroundColor = .red
     imageView.image = UIImage(named: "mjprofile")
     imageView.layer.cornerRadius = 22
     imageView.layer.masksToBounds = true
@@ -90,9 +90,8 @@ class VideoCell: UICollectionViewCell {
   
   let titleLabel: UILabel = {
     let label = UILabel()
-    label.backgroundColor = UIColor.green
     label.translatesAutoresizingMaskIntoConstraints = false
-
+    label.text = "Michael Jackson - Beat It"
     return label
 
   }()
@@ -100,8 +99,10 @@ class VideoCell: UICollectionViewCell {
   
   let subTitleTextView: UITextView = {
     let textView = UITextView()
-    textView.backgroundColor = UIColor.yellow
+//    textView.backgroundColor = .systemPink
     textView.translatesAutoresizingMaskIntoConstraints = false
+    textView.text = "MJVevo * 1,444,440 views * 2 years"
+    textView.textContainerInset = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
     return textView
   }()
   
