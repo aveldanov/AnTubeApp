@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension UIColor{
+  static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat)->UIColor{
+    
+    return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+  }
+  
+  
+}
+
+
+
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
   var window: UIWindow?
@@ -28,7 +40,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       self.window = window
       window.makeKeyAndVisible()
       
-      navigationController.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+//      navigationController.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+      navigationController.navigationBar.barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+      
+    
+      
+      guard let statusBarFrame = windowScene.statusBarManager?.statusBarFrame else{return}
+      let statusBarBackgroundView = UIView(frame: statusBarFrame)
+      statusBarBackgroundView.backgroundColor = .blue
     }
     
     

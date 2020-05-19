@@ -17,10 +17,19 @@ class HomeScreenViewController: UICollectionViewController,UICollectionViewDeleg
     
     collectionView.backgroundColor = .white
     navigationController?.navigationBar.isTranslucent = false
-    navigationItem.title = "Home"
+    let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width-32, height: view.frame.height))
+    titleLabel.text = "Home"
+    titleLabel.textColor = .white
+    titleLabel.font = UIFont.systemFont(ofSize: 20)
+    navigationItem.titleView = titleLabel
     collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Cell")
+    
+    
+    
 
   }
+  
+
   
   //MARK: - Collection Methods
   
