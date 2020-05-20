@@ -14,6 +14,8 @@
 		21322CFD246F9D29005A290B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21322CFB246F9D29005A290B /* LaunchScreen.storyboard */; };
 		21322D05246FA727005A290B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21322D04246FA727005A290B /* HomeScreenViewController.swift */; };
 		21322D07247121C0005A290B /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 21322D06247121C0005A290B /* LICENSE.md */; };
+		21322D0A24750D87005A290B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21322D0924750D87005A290B /* Extensions.swift */; };
+		21322D0D24750E23005A290B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21322D0C24750E23005A290B /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		21322CFE246F9D29005A290B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21322D04246FA727005A290B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		21322D06247121C0005A290B /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		21322D0924750D87005A290B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		21322D0C24750E23005A290B /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +63,41 @@
 		21322CEF246F9D26005A290B /* AnTubeApp */ = {
 			isa = PBXGroup;
 			children = (
+				21322D0B24750DF7005A290B /* View */,
+				21322D0E24750E88005A290B /* Controller */,
+				21322D0824750D50005A290B /* Helpers */,
 				21322CF0246F9D26005A290B /* AppDelegate.swift */,
 				21322CF2246F9D26005A290B /* SceneDelegate.swift */,
-				21322D04246FA727005A290B /* HomeScreenViewController.swift */,
 				21322CF6246F9D26005A290B /* Main.storyboard */,
 				21322CF9246F9D29005A290B /* Assets.xcassets */,
 				21322CFB246F9D29005A290B /* LaunchScreen.storyboard */,
 				21322CFE246F9D29005A290B /* Info.plist */,
 			);
 			path = AnTubeApp;
+			sourceTree = "<group>";
+		};
+		21322D0824750D50005A290B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21322D0924750D87005A290B /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		21322D0B24750DF7005A290B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21322D0C24750E23005A290B /* VideoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21322D0E24750E88005A290B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21322D04246FA727005A290B /* HomeScreenViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21322D0D24750E23005A290B /* VideoCell.swift in Sources */,
 				21322D05246FA727005A290B /* HomeScreenViewController.swift in Sources */,
 				21322CF1246F9D26005A290B /* AppDelegate.swift in Sources */,
 				21322CF3246F9D26005A290B /* SceneDelegate.swift in Sources */,
+				21322D0A24750D87005A290B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

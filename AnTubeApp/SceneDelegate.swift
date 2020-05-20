@@ -8,14 +8,7 @@
 
 import UIKit
 
-extension UIColor{
-  static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat)->UIColor{
-    
-    return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
-  }
-  
-  
-}
+
 
 
 
@@ -47,7 +40,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       
       guard let statusBarFrame = windowScene.statusBarManager?.statusBarFrame else{return}
       let statusBarBackgroundView = UIView(frame: statusBarFrame)
-      statusBarBackgroundView.backgroundColor = .blue
+      statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+      
+      
+      window.addSubview(statusBarBackgroundView)
+ 
     }
     
     
